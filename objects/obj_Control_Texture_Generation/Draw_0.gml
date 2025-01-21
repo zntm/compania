@@ -48,6 +48,30 @@ surface_reset_target();
 
 #region Edge
 
+texture_generation_edge_init("l");
+texture_generation_edge_init("t");
+texture_generation_edge_init("r");
+texture_generation_edge_init("b");
+
+for (var i = 0; i < TEXTURE_GENERATION_SIZE; ++i)
+{
+    if (i <= edge_indent_corner_padding) || (i >= (TEXTURE_GENERATION_SIZE - 1) - edge_indent_corner_padding)
+    {
+        surface_edge_indent_l = 0;
+        surface_edge_indent_t = 0;
+        surface_edge_indent_r = 0;
+        surface_edge_indent_b = 0;
+    }
+    
+    random_set_seed(edge_seed + i);
+    
+    texture_generation_edge(surface_edge_indent_l, i, "l");
+    texture_generation_edge(i, surface_edge_indent_t, "t");
+    
+    texture_generation_edge((TEXTURE_GENERATION_SIZE - 1) - surface_edge_indent_r, i, "r");
+    texture_generation_edge(i, (TEXTURE_GENERATION_SIZE - 1) - surface_edge_indent_b, "b");
+}
+
 #endregion
 
 for (var i = 0; i < 3; ++i)
@@ -55,5 +79,10 @@ for (var i = 0; i < 3; ++i)
     for (var j = 0; j < 3; ++j)
     {
         draw_surface(surface_base, 128 + (i * 16), 128 + (j * 16));
+        
+        draw_surface(surface_edge_l, 128 + (i * 16), 128 + (j * 16));
+        draw_surface(surface_edge_t, 128 + (i * 16), 128 + (j * 16));
+        draw_surface(surface_edge_r, 128 + (i * 16), 128 + (j * 16));
+        draw_surface(surface_edge_b, 128 + (i * 16), 128 + (j * 16));
     }
 }

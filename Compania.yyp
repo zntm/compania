@@ -52,6 +52,8 @@
     {"id":{"name":"file_read_directory","path":"scripts/file_read_directory/file_read_directory.yy",},},
     {"id":{"name":"noise","path":"scripts/noise/noise.yy",},},
     {"id":{"name":"string_pad_start","path":"scripts/string_pad_start/string_pad_start.yy",},},
+    {"id":{"name":"texture_generation_edge_init","path":"scripts/texture_generation_edge_init/texture_generation_edge_init.yy",},},
+    {"id":{"name":"texture_generation_edge","path":"scripts/texture_generation_edge/texture_generation_edge.yy",},},
     {"id":{"name":"texture_generation_gradient_set","path":"scripts/texture_generation_gradient_set/texture_generation_gradient_set.yy",},},
     {"id":{"name":"texture_generation_init_colour","path":"scripts/texture_generation_init_colour/texture_generation_init_colour.yy",},},
     {"id":{"name":"texture_generation_init","path":"scripts/texture_generation_init/texture_generation_init.yy",},},

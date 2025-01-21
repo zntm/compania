@@ -44,6 +44,16 @@ surface_edge_t = -1;
 surface_edge_r = -1;
 surface_edge_b = -1;
 
+surface_edge_indent_l = false;
+surface_edge_indent_t = false;
+surface_edge_indent_r = false;
+surface_edge_indent_b = false;
+
+surface_edge_indent_count_l = 0;
+surface_edge_indent_count_t = 0;
+surface_edge_indent_count_r = 0;
+surface_edge_indent_count_b = 0;
+
 section_edge = -1;
 section_colour_edge = -1;
 
@@ -57,7 +67,7 @@ edge_seed = irandom_range(0, (1 << 24) - 1);
 edge_octaves = 32;
 
 edge_indent_chance = 0.5;
-edge_indent_chance_step = 0.5;
+edge_indent_chance_step = 1;
 
 edge_indent_corner_padding = 3;
 
