@@ -1,0 +1,1 @@
+array_foreach(sprite, sprite_delete);
