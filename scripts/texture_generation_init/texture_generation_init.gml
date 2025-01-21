@@ -78,8 +78,6 @@ function texture_generation_init()
     
     dbg_slider_int(ref_create(id, "edge_indent_corner_padding"), 0, 8, "Indent Corner Padding");
     
-    texture_generation_gradient_set("edge_colour", c_black, c_white);
-    
     dbg_colour(ref_create(id, "edge_gradient_start"), "Gradient Start");
     dbg_colour(ref_create(id, "edge_gradient_end"), "Gradient End");
     

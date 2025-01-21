@@ -30,10 +30,10 @@ base_stretch_y = 1;
 base_falloff = 0;
 base_falloff_alpha = 1;
 
-base_gradient_start = c_black;
-base_gradient_end = c_white;
+base_gradient_start = irandom(255 * 255 * 255);
+base_gradient_end   = irandom(255 * 255 * 255);
 
-texture_generation_gradient_set("base_colour", c_black, c_white);
+texture_generation_gradient_set("base_colour", base_gradient_start, base_gradient_end);
 
 #endregion
 
@@ -71,8 +71,10 @@ edge_indent_chance_step = 1;
 
 edge_indent_corner_padding = 3;
 
-edge_gradient_start = c_black;
-edge_gradient_end = c_white;
+edge_gradient_start = irandom(255 * 255 * 255);
+edge_gradient_end   = irandom(255 * 255 * 255);
+
+texture_generation_gradient_set("edge_colour", edge_gradient_start, edge_gradient_end);
 
 #endregion
 

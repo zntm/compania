@@ -5,7 +5,9 @@ directory_create("color_swap/import/sprite");
 
 directory_create("color_swap/export");
 
-global.tile_connected_edge = [
+directory_create("texture_generation");
+
+global.texture_generation_bit = [
     0b1111,
     0b1111,
     0b0100,
