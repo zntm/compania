@@ -60,15 +60,3 @@ function noise(_x, _y, _amplitude, _octaves, _seed)
     
     return buffer_peek(__buffer, (((_y + (1 << 32)) & (NOISE_SIZE - 1)) << log2(NOISE_SIZE)) | ((_x + (1 << 32)) & (NOISE_SIZE - 1)), buffer_u8);
 }
-
-repeat (10)
-{
-    var f = current_time;
-    
-    for (var i = 0; i < 100000; ++i)
-    {
-        noise(i & (NOISE_SIZE - 1), i >> log2(NOISE_SIZE), 255, 24, 1241124214);
-    }
-    
-    show_debug_message($"FF {current_time - f}")
-}

@@ -1,4 +1,4 @@
-function texture_generation_gradient_set(_name, _start, _end)
+function rixa_gradient_set(_name, _start, _end)
 {
     with (obj_Control_Texture_Generation)
     {

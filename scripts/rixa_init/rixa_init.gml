@@ -1,4 +1,4 @@
-function texture_generation_init()
+function rixa_init()
 {
     if (dbg_view_exists(debug_view))
     {
@@ -39,7 +39,7 @@ function texture_generation_init()
     
     dbg_button("Set Gradient", function()
     {
-        texture_generation_gradient_set("base_colour", base_gradient_start, base_gradient_end);
+        rixa_gradient_set("base_colour", base_gradient_start, base_gradient_end);
     });
     
     dbg_same_line();
@@ -83,7 +83,7 @@ function texture_generation_init()
     
     dbg_button("Set Gradient", function()
     {
-        texture_generation_gradient_set("edge_colour", edge_gradient_start, edge_gradient_end);
+        rixa_gradient_set("edge_colour", edge_gradient_start, edge_gradient_end);
     });
     
     dbg_same_line();
@@ -102,6 +102,6 @@ function texture_generation_init()
     
     #endregion
     
-    texture_generation_init_colour("base");
-    texture_generation_init_colour("edge");
+    rixa_init_colour("base");
+    rixa_init_colour("edge");
 }

@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"texture_generation_gradient_set",
+  "%Name":"rixa_init",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"texture_generation_gradient_set",
+  "name":"rixa_init",
   "parent":{
     "name":"Texture Generation",
     "path":"folders/Scripts/Texture Generation.yy",

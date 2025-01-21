@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"texture_generation_init_colour",
+  "%Name":"rixa_edge",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"texture_generation_init_colour",
+  "name":"rixa_edge",
   "parent":{
     "name":"Texture Generation",
     "path":"folders/Scripts/Texture Generation.yy",

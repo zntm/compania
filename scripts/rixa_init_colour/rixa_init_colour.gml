@@ -1,4 +1,4 @@
-function texture_generation_init_colour(_name)
+function rixa_init_colour(_name)
 {
     with (obj_Control_Texture_Generation)
     {

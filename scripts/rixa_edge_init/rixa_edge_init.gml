@@ -1,4 +1,4 @@
-function texture_generation_edge_init(_type)
+function rixa_edge_init(_type)
 {
     if (!surface_exists(id[$ $"surface_edge_{_type}"]))
     {

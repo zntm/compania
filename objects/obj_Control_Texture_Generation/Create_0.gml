@@ -1,4 +1,6 @@
-#macro TEXTURE_GENERATION_SIZE 16
+#macro RIXA_SIZE 16
+
+randomize();
 
 debug_view = -1;
 
@@ -33,7 +35,7 @@ base_falloff_alpha = 1;
 base_gradient_start = irandom(255 * 255 * 255);
 base_gradient_end   = irandom(255 * 255 * 255);
 
-texture_generation_gradient_set("base_colour", base_gradient_start, base_gradient_end);
+rixa_gradient_set("base_colour", base_gradient_start, base_gradient_end);
 
 #endregion
 
@@ -74,8 +76,12 @@ edge_indent_corner_padding = 3;
 edge_gradient_start = irandom(255 * 255 * 255);
 edge_gradient_end   = irandom(255 * 255 * 255);
 
-texture_generation_gradient_set("edge_colour", edge_gradient_start, edge_gradient_end);
+rixa_gradient_set("edge_colour", edge_gradient_start, edge_gradient_end);
 
 #endregion
 
-texture_generation_init();
+rixa_init();
+
+preview_bit = array_create_ext(5, rixa_init_preview);
+
+timer = 0;

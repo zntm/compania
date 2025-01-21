@@ -1,4 +1,4 @@
-function texture_generation_edge(_x, _y, _type)
+function rixa_edge(_x, _y, _type)
 {
     surface_set_target(id[$ $"surface_edge_{_type}"]);
     

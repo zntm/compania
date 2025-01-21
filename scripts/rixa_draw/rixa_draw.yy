@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"texture_generation_edge",
+  "%Name":"rixa_draw",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"texture_generation_edge",
+  "name":"rixa_draw",
   "parent":{
     "name":"Texture Generation",
     "path":"folders/Scripts/Texture Generation.yy",
