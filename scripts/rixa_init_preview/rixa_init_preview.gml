@@ -1,4 +1,4 @@
 function rixa_init_preview()
 {
-    return irandom(0b11111);
+    return irandom((1 << preview_height) - 1);
 }

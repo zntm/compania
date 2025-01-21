@@ -7,6 +7,19 @@ if (base_colour_length != base_colour_length_new) || (edge_colour_length != edge
     rixa_init_colour("edge");
 }
 
+if (preview_width != preview_width_new) || (preview_height != preview_height_new)
+{
+    preview_width_new  = preview_width;
+    preview_height_new = preview_height;
+    
+    array_resize(preview_bit, preview_width);
+    
+    for (var i = 0; i < preview_width; ++i)
+    {
+        preview_bit[@ i] = rixa_init_preview();
+    }
+}
+
 #region Base
 
 if (!surface_exists(surface_base))
@@ -102,7 +115,7 @@ if (timer % 60 == 0)
 {
     randomize();
     
-    for (var i = 0; i < 5; ++i)
+    for (var i = 0; i < preview_width; ++i)
     {
         preview_bit[@ i] = rixa_init_preview();
     }
@@ -110,37 +123,61 @@ if (timer % 60 == 0)
 
 var _rixa_bit_index = global.rixa_bit_index;
 
-for (var i = 0; i < 5; ++i)
+for (var i = 0; i < preview_width; ++i)
 {
     var _preview_bit = preview_bit[i];
     
-    for (var j = 0; j < 5; ++j)
+    for (var j = 0; j < preview_height; ++j)
     {
         if (_preview_bit & (1 << j)) continue;
+        
+        var _x2 = _x + 256 + (i * RIXA_SIZE);
+        var _y2 = _y + (j * RIXA_SIZE);
+        
+        var _flip_x = (preview_flip_x) && (irandom(1));
+        var _flip_y = (preview_flip_y) && (irandom(1));
         
         var _bit = 0;
         
         if (i == 0) || ((preview_bit[i - 1] & (1 << j)))
         {
             _bit |= 1 << 3;
+            
+            _flip_x = false;
         }
         
         if (j == 0) || ((_preview_bit & (1 << (j - 1))))
         {
             _bit |= 1 << 2;
+            
+            _flip_y = false;
         }        
         
-        if (i == 4) || ((preview_bit[i + 1] & (1 << j)))
+        if (i == preview_width - 1) || ((preview_bit[i + 1] & (1 << j)))
         {
             _bit |= 1 << 1;
+            
+            _flip_x = false;
         }
         
-        if (j == 4) || ((_preview_bit & (1 << (j + 1))))
+        if (j == preview_height - 1) || ((_preview_bit & (1 << (j + 1))))
         {
             _bit |= 1 << 0;
+            
+            _flip_y = false;
         }
         
-        rixa_draw(_rixa_bit_index[_bit], _x + 256 + (i * RIXA_SIZE), _y + (j * RIXA_SIZE));
+        if (_flip_x)
+        {
+            _x2 += RIXA_SIZE;
+        }
+        
+        if (_flip_y)
+        {
+            _y2 += RIXA_SIZE;
+        }
+        
+        rixa_draw(_rixa_bit_index[_bit], _x2, _y2, (_flip_x ? -1 : 1), (_flip_y ? -1 : 1));
     }
 }
 

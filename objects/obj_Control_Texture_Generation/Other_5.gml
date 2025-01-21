@@ -1,3 +1,8 @@
+if (dbg_section_exists(section_preview))
+{
+    dbg_section_delete(section_preview);
+}
+
 if (dbg_section_exists(section_base))
 {
     dbg_section_delete(section_base);

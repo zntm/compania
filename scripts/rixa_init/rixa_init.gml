@@ -7,6 +7,19 @@ function rixa_init()
     
     debug_view = dbg_view("Texture Generation", true);
     
+    if (dbg_section_exists(section_preview))
+    {
+        dbg_section_delete(section_preview);
+    }
+    
+    section_preview = dbg_section("Preview");
+    
+    dbg_slider_int(ref_create(id, "preview_width"), 3, 9, "Width", 2);
+    dbg_slider_int(ref_create(id, "preview_height"), 3, 9, "Height", 2);
+    
+    dbg_checkbox(ref_create(id, "preview_flip_x"), "Flip X");
+    dbg_checkbox(ref_create(id, "preview_flip_y"), "Flip Y");
+    
     if (dbg_section_exists(section_base))
     {
         dbg_section_delete(section_base);

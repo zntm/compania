@@ -4,6 +4,17 @@ randomize();
 
 debug_view = -1;
 
+section_preview = -1;
+
+preview_width  = 5;
+preview_height = 5;
+
+preview_width_new  = 5;
+preview_height_new = 5;
+
+preview_flip_x = false;
+preview_flip_y = false;
+
 #region Base
 
 surface_base = -1;
