@@ -8,6 +8,8 @@ function rixa_edge(_x, _y, _type)
     
     surface_reset_target();
     
+    random_set_seed(edge_seed + _x + (_y * RIXA_SIZE));
+    
     if (random(1) < edge_indent_chance) && (id[$ $"surface_edge_indent_{_type}"]) || (id[$ $"surface_edge_indent_count_{_type}"] >= edge_indent_chance_step)
     {
         id[$ $"surface_edge_indent_count_{_type}"] = 0;

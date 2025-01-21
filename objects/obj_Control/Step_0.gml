@@ -12,3 +12,8 @@ if (keyboard_check_pressed(vk_f2))
 {
     show_debug_overlay(!is_debug_overlay_open());
 }
+
+if (keyboard_check_pressed(vk_f11))
+{
+    window_set_fullscreen(!window_get_fullscreen());
+}
