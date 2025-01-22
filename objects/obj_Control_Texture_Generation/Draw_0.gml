@@ -104,7 +104,7 @@ var _y = room_height / 2;
     var _x2 = _x - (RIXA_SIZE * 2.5) - 128;
     var _y2 = _y - (RIXA_SIZE * 2.5);
     
-    draw_rectangle_colour(_x2 - (RIXA_SIZE * 2), _y2 - (RIXA_SIZE * 2), _x2 + (RIXA_SIZE * 5), _y2 + (RIXA_SIZE * 5), preview_colour_tl, preview_colour_tr, preview_colour_bl, preview_colour_br, false);
+    draw_rectangle_colour(_x2 - (RIXA_SIZE * 2), _y2 - (RIXA_SIZE * 2), _x2 + (RIXA_SIZE * 5), _y2 + (RIXA_SIZE * 5), preview_colour_tl, preview_colour_tr, preview_colour_br, preview_colour_bl, false);
     
     rixa_draw(1,  _x2 + (RIXA_SIZE * 3), _y2 + (RIXA_SIZE * 3));
     rixa_draw(16, _x2, _y2);
@@ -132,7 +132,7 @@ var _y = room_height / 2;
     var _x2 = _x - (RIXA_SIZE * (preview_width  / 2)) + 128;
     var _y2 = _y - (RIXA_SIZE * (preview_height / 2));
     
-    draw_rectangle_colour(_x2 - RIXA_SIZE, _y2 - RIXA_SIZE, _x2 + (RIXA_SIZE * (preview_width + 1)), _y2 + (RIXA_SIZE * (preview_height + 1)), preview_colour_tl, preview_colour_tr, preview_colour_bl, preview_colour_br, false);
+    draw_rectangle_colour(_x2 - RIXA_SIZE, _y2 - RIXA_SIZE, _x2 + (RIXA_SIZE * (preview_width + 1)), _y2 + (RIXA_SIZE * (preview_height + 1)), preview_colour_tl, preview_colour_tr, preview_colour_br, preview_colour_bl, false);
     
     var _rixa_bit_index = global.rixa_bit_index;
     
