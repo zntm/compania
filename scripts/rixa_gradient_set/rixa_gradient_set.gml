@@ -1,6 +1,6 @@
 function rixa_gradient_set(_name, _start, _end)
 {
-    with (obj_Control_Texture_Generation)
+    with (obj_Control_Rixa)
     {
         var _length = id[$ $"{_name}_length"];
         

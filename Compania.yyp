@@ -37,7 +37,7 @@
   "resources":[
     {"id":{"name":"execute_shell_simple_ext","path":"extensions/execute_shell_simple_ext/execute_shell_simple_ext.yy",},},
     {"id":{"name":"obj_Control_Color_Swap","path":"objects/obj_Control_Color_Swap/obj_Control_Color_Swap.yy",},},
-    {"id":{"name":"obj_Control_Texture_Generation","path":"objects/obj_Control_Texture_Generation/obj_Control_Texture_Generation.yy",},},
+    {"id":{"name":"obj_Control_Rixa","path":"objects/obj_Control_Rixa/obj_Control_Rixa.yy",},},
     {"id":{"name":"obj_Control","path":"objects/obj_Control/obj_Control.yy",},},
     {"id":{"name":"obj_Menu_Button","path":"objects/obj_Menu_Button/obj_Menu_Button.yy",},},
     {"id":{"name":"obj_Title","path":"objects/obj_Title/obj_Title.yy",},},

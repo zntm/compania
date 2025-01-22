@@ -4,13 +4,6 @@ function rixa_draw(_index, _x, _y, _xscale = 1, _yscale = 1)
     
     var _ = global.rixa_bit[_index];
     
-    var _surface_base = obj_Control_Texture_Generation.surface_base;
-    
-    var _surface_edge_l = obj_Control_Texture_Generation.surface_edge_l;
-    var _surface_edge_t = obj_Control_Texture_Generation.surface_edge_t;
-    var _surface_edge_r = obj_Control_Texture_Generation.surface_edge_r;
-    var _surface_edge_b = obj_Control_Texture_Generation.surface_edge_b;
-    
     if (!surface_exists(__surface))
     {
         __surface = surface_create(RIXA_SIZE, RIXA_SIZE);
@@ -19,7 +12,7 @@ function rixa_draw(_index, _x, _y, _xscale = 1, _yscale = 1)
     surface_set_target(__surface);
     draw_clear_alpha(c_black, 0);
     
-    draw_surface(_surface_base, 0, 0);
+    draw_surface(obj_Control_Rixa.surface_base, 0, 0);
     
     if (_ & 0b1000)
     {
@@ -29,7 +22,7 @@ function rixa_draw(_index, _x, _y, _xscale = 1, _yscale = 1)
         
         gpu_set_blendmode(bm_normal);
         
-        draw_surface(_surface_edge_l, 0, 0);
+        draw_surface(obj_Control_Rixa.surface_edge_l, 0, 0);
     }
     
     if (_ & 0b0100)
@@ -40,7 +33,7 @@ function rixa_draw(_index, _x, _y, _xscale = 1, _yscale = 1)
         
         gpu_set_blendmode(bm_normal);
         
-        draw_surface(_surface_edge_t, 0, 0);
+        draw_surface(obj_Control_Rixa.surface_edge_t, 0, 0);
     }
     
     if (_ & 0b0010)
@@ -51,7 +44,7 @@ function rixa_draw(_index, _x, _y, _xscale = 1, _yscale = 1)
         
         gpu_set_blendmode(bm_normal);
         
-        draw_surface(_surface_edge_r, 0, 0);
+        draw_surface(obj_Control_Rixa.surface_edge_r, 0, 0);
     }
     
     if (_ & 0b0001)
@@ -62,7 +55,7 @@ function rixa_draw(_index, _x, _y, _xscale = 1, _yscale = 1)
         
         gpu_set_blendmode(bm_normal);
         
-        draw_surface(_surface_edge_b, 0, 0);
+        draw_surface(obj_Control_Rixa.surface_edge_b, 0, 0);
     }
     
     if ((_ & 0b1100) == 0b1100)

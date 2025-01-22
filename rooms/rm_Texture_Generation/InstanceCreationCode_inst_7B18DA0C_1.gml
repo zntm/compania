@@ -1,3 +1,3 @@
 text = "Reload";
 
-on_press = method(obj_Control_Texture_Generation, rixa_init);
+on_press = method(obj_Control_Rixa, rixa_init);

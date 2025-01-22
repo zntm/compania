@@ -28,9 +28,11 @@ shader_reset();
 
 draw_set_halign(fa_right);
 
-var _colour_length = array_length(colour);
-
 draw_text(room_width - 16, 16, "Colors");
+
+draw_set_halign(fa_left);
+
+var _colour_length = array_length(colour);
 
 for (var i = 0; i < _colour_length; ++i)
 {
@@ -49,8 +51,6 @@ for (var i = 0; i < _colour_length; ++i)
         draw_rectangle_colour(_x1, _y1, _x2, _y2, _colour, _colour, _colour, _colour, false);
     }
 }
-
-draw_set_halign(fa_left);
 
 var _x1 = room_width - 16 - (_colour_strip_length * 16);
 var _y1 = 16 + 24 + (_colour_index * 8);

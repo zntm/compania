@@ -60,6 +60,8 @@ function rixa_init()
     dbg_same_line();
     dbg_button("Randomize Gradient", function()
     {
+        randomize();
+        
         base_gradient_start = irandom(255 * 255 * 255);
         base_gradient_end   = irandom(255 * 255 * 255);
     });
@@ -104,6 +106,8 @@ function rixa_init()
     dbg_same_line();
     dbg_button("Randomize Gradient", function()
     {
+        randomize();
+        
         edge_gradient_start = irandom(255 * 255 * 255);
         edge_gradient_end   = irandom(255 * 255 * 255);
     });

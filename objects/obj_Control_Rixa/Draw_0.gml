@@ -195,4 +195,36 @@ var _y = room_height / 2;
     }
 }
 
+draw_set_halign(fa_right);
+
+draw_text(room_width - 16, 16, "Colors");
+
+draw_set_halign(fa_left);
+
+for (var i = 0; i < base_colour_length; ++i)
+{
+    var _colour = base_colour[$ string(i)];
+    
+    var _x1 = room_width - 16 - (i * 16);
+    var _y1 = 16 + 24;
+    
+    var _x2 = _x1 - 16 - 1;
+    var _y2 = _y1 + 8;
+    
+    draw_rectangle_colour(_x1, _y1, _x2, _y2, _colour, _colour, _colour, _colour, false);
+}
+
+for (var i = 0; i < edge_colour_length; ++i)
+{
+    var _colour = edge_colour[$ string(i)];
+    
+    var _x1 = room_width - 16 - (i * 16);
+    var _y1 = 16 + 24 + 8;
+    
+    var _x2 = _x1 - 16 - 1;
+    var _y2 = _y1 + 8;
+    
+    draw_rectangle_colour(_x1, _y1, _x2, _y2, _colour, _colour, _colour, _colour, false);
+}
+
 ++timer;

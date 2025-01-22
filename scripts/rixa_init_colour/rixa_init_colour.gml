@@ -1,6 +1,6 @@
 function rixa_init_colour(_name)
 {
-    with (obj_Control_Texture_Generation)
+    with (obj_Control_Rixa)
     {
         if (dbg_section_exists(id[$ $"section_colour_{_name}"]))
         {
