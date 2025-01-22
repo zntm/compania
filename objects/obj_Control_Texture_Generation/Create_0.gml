@@ -15,6 +15,11 @@ preview_height_new = 5;
 preview_flip_x = false;
 preview_flip_y = false;
 
+preview_colour_tl = irandom(255 * 255 * 255);
+preview_colour_tr = irandom(255 * 255 * 255);
+preview_colour_bl = irandom(255 * 255 * 255);
+preview_colour_br = irandom(255 * 255 * 255);
+
 #region Base
 
 surface_base = -1;
@@ -33,9 +38,6 @@ base_octaves = 32;
 
 base_noise_offset_min = 0;
 base_noise_offset_max = 0;
-
-base_flip_x = false;
-base_flip_y = false;
 
 base_stretch_x = 1;
 base_stretch_y = 1;

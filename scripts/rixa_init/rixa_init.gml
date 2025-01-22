@@ -14,11 +14,16 @@ function rixa_init()
     
     section_preview = dbg_section("Preview");
     
-    dbg_slider_int(ref_create(id, "preview_width"), 3, 9, "Width", 2);
-    dbg_slider_int(ref_create(id, "preview_height"), 3, 9, "Height", 2);
+    dbg_slider_int(ref_create(id, "preview_width"),  3, 15, "Width");
+    dbg_slider_int(ref_create(id, "preview_height"), 3, 15, "Height");
     
     dbg_checkbox(ref_create(id, "preview_flip_x"), "Flip X");
     dbg_checkbox(ref_create(id, "preview_flip_y"), "Flip Y");
+    
+    dbg_colour(ref_create(id, "preview_colour_tl"), "Colour (Top Left)");
+    dbg_colour(ref_create(id, "preview_colour_tr"), "Colour (Top Right)");
+    dbg_colour(ref_create(id, "preview_colour_bl"), "Colour (Bottom Left)");
+    dbg_colour(ref_create(id, "preview_colour_br"), "Colour (Bottom Right)");
     
     if (dbg_section_exists(section_base))
     {
@@ -33,13 +38,10 @@ function rixa_init()
     
     dbg_slider_int(ref_create(id, "base_seed"), 0, (1 << 24) - 1, "Seed");
     
-    dbg_slider_int(ref_create(id, "base_octaves"), 1, 64, "Octaves");
+    dbg_slider(ref_create(id, "base_octaves"), 0.25, 64, "Octaves");
     
     dbg_slider(ref_create(id, "base_noise_offset_min"), 0, 1, "Noise Offset Min");
     dbg_slider(ref_create(id, "base_noise_offset_max"), 0, 1, "Noise Offset Max");
-     
-    dbg_checkbox(ref_create(id, "base_flip_x"), "Flip X");
-    dbg_checkbox(ref_create(id, "base_flip_y"), "Flip Y");
     
     dbg_slider(ref_create(id, "base_stretch_x"), 0, 1, "Stretch X");
     dbg_slider(ref_create(id, "base_stretch_y"), 0, 1, "Stretch Y");
@@ -84,7 +86,7 @@ function rixa_init()
     
     dbg_slider_int(ref_create(id, "edge_seed"), 0, (1 << 24) - 1, "Seed");
     
-    dbg_slider_int(ref_create(id, "edge_octaves"), 1, 64, "Octaves");
+    dbg_slider(ref_create(id, "edge_octaves"), 0.25, 64, "Octaves");
     
     dbg_slider(ref_create(id, "edge_indent_chance"), 0, 1, "Indent Chance");
     dbg_slider_int(ref_create(id, "edge_indent_chance_step"), 0, 8, "Indent Chance Step");

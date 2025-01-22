@@ -87,30 +87,6 @@ for (var i = 0; i < RIXA_SIZE; ++i)
 
 #endregion
 
-var _x = room_width  / 2;
-var _y = room_height / 2;
-
-rixa_draw(1,  _x + (RIXA_SIZE * 3), _y + (RIXA_SIZE * 3));
-rixa_draw(16, _x, _y);
-
-rixa_draw(2,  _x, _y - RIXA_SIZE);
-rixa_draw(3,  _x + RIXA_SIZE, _y);
-rixa_draw(4,  _x, _y + RIXA_SIZE);
-rixa_draw(5,  _x - RIXA_SIZE, _y);
-
-rixa_draw(6,  _x + RIXA_SIZE, _y - RIXA_SIZE);
-rixa_draw(7,  _x + RIXA_SIZE, _y + RIXA_SIZE);
-rixa_draw(8,  _x - RIXA_SIZE, _y + RIXA_SIZE);
-rixa_draw(9,  _x - RIXA_SIZE, _y - RIXA_SIZE);
-
-rixa_draw(10, _x + (RIXA_SIZE * 3), _y - RIXA_SIZE);
-rixa_draw(12, _x + (RIXA_SIZE * 3), _y + RIXA_SIZE);
-rixa_draw(14, _x + (RIXA_SIZE * 3), _y);
-
-rixa_draw(11, _x + RIXA_SIZE, _y + (RIXA_SIZE * 3));
-rixa_draw(13, _x - RIXA_SIZE, _y + (RIXA_SIZE * 3));
-rixa_draw(15, _x, _y + (RIXA_SIZE * 3));
-
 if (timer % 60 == 0)
 {
     randomize();
@@ -121,63 +97,101 @@ if (timer % 60 == 0)
     }
 }
 
-var _rixa_bit_index = global.rixa_bit_index;
+var _x = room_width  / 2;
+var _y = room_height / 2;
 
-for (var i = 0; i < preview_width; ++i)
 {
-    var _preview_bit = preview_bit[i];
+    var _x2 = _x - (RIXA_SIZE * 2.5) - 128;
+    var _y2 = _y - (RIXA_SIZE * 2.5);
     
-    for (var j = 0; j < preview_height; ++j)
+    draw_rectangle_colour(_x2 - (RIXA_SIZE * 2), _y2 - (RIXA_SIZE * 2), _x2 + (RIXA_SIZE * 5), _y2 + (RIXA_SIZE * 5), preview_colour_tl, preview_colour_tr, preview_colour_bl, preview_colour_br, false);
+    
+    rixa_draw(1,  _x2 + (RIXA_SIZE * 3), _y2 + (RIXA_SIZE * 3));
+    rixa_draw(16, _x2, _y2);
+    
+    rixa_draw(2,  _x2, _y2 - RIXA_SIZE);
+    rixa_draw(3,  _x2 + RIXA_SIZE, _y2);
+    rixa_draw(4,  _x2, _y2 + RIXA_SIZE);
+    rixa_draw(5,  _x2 - RIXA_SIZE, _y2);
+    
+    rixa_draw(6,  _x2 + RIXA_SIZE, _y2 - RIXA_SIZE);
+    rixa_draw(7,  _x2 + RIXA_SIZE, _y2 + RIXA_SIZE);
+    rixa_draw(8,  _x2 - RIXA_SIZE, _y2 + RIXA_SIZE);
+    rixa_draw(9,  _x2 - RIXA_SIZE, _y2 - RIXA_SIZE);
+    
+    rixa_draw(10, _x2 + (RIXA_SIZE * 3), _y2 - RIXA_SIZE);
+    rixa_draw(12, _x2 + (RIXA_SIZE * 3), _y2 + RIXA_SIZE);
+    rixa_draw(14, _x2 + (RIXA_SIZE * 3), _y2);
+    
+    rixa_draw(11, _x2 + RIXA_SIZE, _y2 + (RIXA_SIZE * 3));
+    rixa_draw(13, _x2 - RIXA_SIZE, _y2 + (RIXA_SIZE * 3));
+    rixa_draw(15, _x2, _y2 + (RIXA_SIZE * 3));
+}
+
+{
+    var _x2 = _x - (RIXA_SIZE * (preview_width  / 2)) + 128;
+    var _y2 = _y - (RIXA_SIZE * (preview_height / 2));
+    
+    draw_rectangle_colour(_x2 - RIXA_SIZE, _y2 - RIXA_SIZE, _x2 + (RIXA_SIZE * (preview_width + 1)), _y2 + (RIXA_SIZE * (preview_height + 1)), preview_colour_tl, preview_colour_tr, preview_colour_bl, preview_colour_br, false);
+    
+    var _rixa_bit_index = global.rixa_bit_index;
+    
+    for (var i = 0; i < preview_width; ++i)
     {
-        if (_preview_bit & (1 << j)) continue;
+        var _preview_bit = preview_bit[i];
         
-        var _x2 = _x + 256 + (i * RIXA_SIZE);
-        var _y2 = _y + (j * RIXA_SIZE);
-        
-        var _flip_x = (preview_flip_x) && (irandom(1));
-        var _flip_y = (preview_flip_y) && (irandom(1));
-        
-        var _bit = 0;
-        
-        if (i == 0) || ((preview_bit[i - 1] & (1 << j)))
+        for (var j = 0; j < preview_height; ++j)
         {
-            _bit |= 1 << 3;
+            if (_preview_bit & (1 << j)) continue;
             
-            _flip_x = false;
-        }
-        
-        if (j == 0) || ((_preview_bit & (1 << (j - 1))))
-        {
-            _bit |= 1 << 2;
+            var _x3 = _x2 + (i * RIXA_SIZE);
+            var _y3 = _y2 + (j * RIXA_SIZE);
             
-            _flip_y = false;
-        }        
-        
-        if (i == preview_width - 1) || ((preview_bit[i + 1] & (1 << j)))
-        {
-            _bit |= 1 << 1;
+            var _flip_x = (preview_flip_x) && (irandom(1));
+            var _flip_y = (preview_flip_y) && (irandom(1));
             
-            _flip_x = false;
-        }
-        
-        if (j == preview_height - 1) || ((_preview_bit & (1 << (j + 1))))
-        {
-            _bit |= 1 << 0;
+            var _bit = 0;
             
-            _flip_y = false;
+            if (i == 0) || ((preview_bit[i - 1] & (1 << j)))
+            {
+                _bit |= 1 << 3;
+                
+                _flip_x = false;
+            }
+            
+            if (j == 0) || ((_preview_bit & (1 << (j - 1))))
+            {
+                _bit |= 1 << 2;
+                
+                _flip_y = false;
+            }        
+            
+            if (i == preview_width - 1) || ((preview_bit[i + 1] & (1 << j)))
+            {
+                _bit |= 1 << 1;
+                
+                _flip_x = false;
+            }
+            
+            if (j == preview_height - 1) || ((_preview_bit & (1 << (j + 1))))
+            {
+                _bit |= 1 << 0;
+                
+                _flip_y = false;
+            }
+            
+            if (_flip_x)
+            {
+                _x3 += RIXA_SIZE;
+            }
+            
+            if (_flip_y)
+            {
+                _y3 += RIXA_SIZE;
+            }
+            
+            rixa_draw(_rixa_bit_index[_bit], _x3, _y3, (_flip_x ? -1 : 1), (_flip_y ? -1 : 1));
         }
-        
-        if (_flip_x)
-        {
-            _x2 += RIXA_SIZE;
-        }
-        
-        if (_flip_y)
-        {
-            _y2 += RIXA_SIZE;
-        }
-        
-        rixa_draw(_rixa_bit_index[_bit], _x2, _y2, (_flip_x ? -1 : 1), (_flip_y ? -1 : 1));
     }
 }
 
