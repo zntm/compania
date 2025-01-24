@@ -37,11 +37,13 @@
   "resources":[
     {"id":{"name":"execute_shell_simple_ext","path":"extensions/execute_shell_simple_ext/execute_shell_simple_ext.yy",},},
     {"id":{"name":"obj_Control_Color_Swap","path":"objects/obj_Control_Color_Swap/obj_Control_Color_Swap.yy",},},
+    {"id":{"name":"obj_Control_Conexa","path":"objects/obj_Control_Conexa/obj_Control_Conexa.yy",},},
     {"id":{"name":"obj_Control_Rixa","path":"objects/obj_Control_Rixa/obj_Control_Rixa.yy",},},
     {"id":{"name":"obj_Control","path":"objects/obj_Control/obj_Control.yy",},},
     {"id":{"name":"obj_Menu_Button","path":"objects/obj_Menu_Button/obj_Menu_Button.yy",},},
     {"id":{"name":"obj_Title","path":"objects/obj_Title/obj_Title.yy",},},
     {"id":{"name":"rm_Color_Swap","path":"rooms/rm_Color_Swap/rm_Color_Swap.yy",},},
+    {"id":{"name":"rm_Connected_Texture_Generation","path":"rooms/rm_Connected_Texture_Generation/rm_Connected_Texture_Generation.yy",},},
     {"id":{"name":"rm_Home","path":"rooms/rm_Home/rm_Home.yy",},},
     {"id":{"name":"rm_Template","path":"rooms/rm_Template/rm_Template.yy",},},
     {"id":{"name":"rm_Texture_Generation","path":"rooms/rm_Texture_Generation/rm_Texture_Generation.yy",},},
@@ -70,6 +72,7 @@
     {"roomId":{"name":"rm_Template","path":"rooms/rm_Template/rm_Template.yy",},},
     {"roomId":{"name":"rm_Texture_Generation","path":"rooms/rm_Texture_Generation/rm_Texture_Generation.yy",},},
     {"roomId":{"name":"rm_Color_Swap","path":"rooms/rm_Color_Swap/rm_Color_Swap.yy",},},
+    {"roomId":{"name":"rm_Connected_Texture_Generation","path":"rooms/rm_Connected_Texture_Generation/rm_Connected_Texture_Generation.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

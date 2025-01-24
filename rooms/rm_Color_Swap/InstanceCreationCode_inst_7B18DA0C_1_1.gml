@@ -21,7 +21,7 @@ on_press = function()
     
     #region Colour
     
-    var _sprite_colour = sprite_add("color_swap/import/colour.png", 0, false, false, 0, 0);
+    var _sprite_colour = sprite_add("color_swap/import/colour.png", 1, false, false, 0, 0);
     
     var _colour_width  = sprite_get_width(_sprite_colour);
     var _colour_height = sprite_get_height(_sprite_colour);
@@ -58,7 +58,7 @@ on_press = function()
     
     array_foreach(_files, function(_value, _index)
     {
-        obj_Control_Color_Swap.sprite[@ _index] = sprite_add($"color_swap/import/sprite/{_value}", 0, false, false, 0, 0);
+        obj_Control_Color_Swap.sprite[@ _index] = sprite_add($"color_swap/import/sprite/{_value}", 1, false, false, 0, 0);
     });
     
     #endregion

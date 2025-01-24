@@ -7,6 +7,9 @@ directory_create("color_swap/export");
 
 directory_create("rixa");
 
+directory_create("conexa/import");
+directory_create("conexa/export");
+
 global.rixa_bit = [
     0b1111,
     0b1111,
