@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"rixa_init_preview",
+  "%Name":"conexa_draw",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"rixa_init_preview",
+  "name":"conexa_draw",
   "parent":{
-    "name":"Rixa",
-    "path":"folders/Scripts/Rixa.yy",
+    "name":"Conexa",
+    "path":"folders/Scripts/Conexa.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

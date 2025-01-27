@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"rixa_gradient_set",
   "parent":{
-    "name":"Texture Generation",
-    "path":"folders/Scripts/Texture Generation.yy",
+    "name":"Rixa",
+    "path":"folders/Scripts/Rixa.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

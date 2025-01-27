@@ -1,8 +1,8 @@
 function rixa_draw(_index, _x, _y, _xscale = 1, _yscale = 1)
 {
-    static __surface = -1;
-    
     var _ = global.rixa_bit[_index];
+    
+    static __surface = -1;
     
     if (!surface_exists(__surface))
     {
