@@ -55,6 +55,8 @@ if (sprite_exists(sprite_base)) && (sprite_exists(sprite_edge))
     }
     
     {
+        random_set_seed(floor(timer / 60));
+
         var _x2 = _x - (RIXA_SIZE * (preview_width  / 2)) + 128;
         var _y2 = _y - (RIXA_SIZE * (preview_height / 2));
         

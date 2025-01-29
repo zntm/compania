@@ -50,6 +50,7 @@
     {"id":{"name":"rm_Texture_Generation","path":"rooms/rm_Texture_Generation/rm_Texture_Generation.yy",},},
     {"id":{"name":"___init___","path":"scripts/___init___/___init___.yy",},},
     {"id":{"name":"conexa_draw","path":"scripts/conexa_draw/conexa_draw.yy",},},
+    {"id":{"name":"conexa_init","path":"scripts/conexa_init/conexa_init.yy",},},
     {"id":{"name":"datetime_to_unix","path":"scripts/datetime_to_unix/datetime_to_unix.yy",},},
     {"id":{"name":"debug_log","path":"scripts/debug_log/debug_log.yy",},},
     {"id":{"name":"draw_set_align","path":"scripts/draw_set_align/draw_set_align.yy",},},

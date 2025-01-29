@@ -3,6 +3,10 @@ sprite_edge = -1;
 
 randomize();
 
+debug_view = -1;
+
+section_preview = -1;
+
 preview_width  = 5;
 preview_height = 5;
 
@@ -18,5 +22,7 @@ preview_colour_tl = irandom(255 * 255 * 255);
 preview_colour_tr = irandom(255 * 255 * 255);
 preview_colour_bl = irandom(255 * 255 * 255);
 preview_colour_br = irandom(255 * 255 * 255);
+
+conexa_init();
 
 timer = 0;

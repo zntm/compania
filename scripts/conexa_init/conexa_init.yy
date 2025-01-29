@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"conexa_init",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"conexa_init",
+  "parent":{
+    "name":"Conexa",
+    "path":"folders/Scripts/Conexa.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
