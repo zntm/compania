@@ -101,8 +101,8 @@ var _x = room_width  / 2;
 var _y = room_height / 2;
 
 {
-    var _x2 = _x - (RIXA_SIZE * 2.5) - 128;
-    var _y2 = _y - (RIXA_SIZE * 2.5);
+    var _x2 = _x - (RIXA_SIZE * 1.5) - 128;
+    var _y2 = _y - (RIXA_SIZE * 1.5);
     
     draw_rectangle_colour(_x2 - (RIXA_SIZE * 2), _y2 - (RIXA_SIZE * 2), _x2 + (RIXA_SIZE * 5), _y2 + (RIXA_SIZE * 5), preview_colour_tl, preview_colour_tr, preview_colour_br, preview_colour_bl, false);
     

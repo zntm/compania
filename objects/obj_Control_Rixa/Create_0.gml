@@ -12,6 +12,8 @@ preview_height = 5;
 preview_width_new  = 5;
 preview_height_new = 5;
 
+preview_bit = array_create_ext(5, rixa_init_preview);
+
 preview_flip_x = false;
 preview_flip_y = false;
 
@@ -94,7 +96,5 @@ rixa_gradient_set("edge_colour", edge_gradient_start, edge_gradient_end);
 #endregion
 
 rixa_init();
-
-preview_bit = array_create_ext(5, rixa_init_preview);
 
 timer = 0;
