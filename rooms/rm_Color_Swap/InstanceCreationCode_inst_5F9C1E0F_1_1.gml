@@ -56,7 +56,14 @@ on_press = function()
             
             surface_reset_target();
             
-            surface_save(_surface, $"color_swap/export/{_unix}/{j - 1}/{i}.png");
+            if (obj_Control_Color_Swap.strip_length == 1)
+            {
+                surface_save(_surface, $"color_swap/export/{_unix}/{j - 1}/{i}.png");
+            }
+            else
+            {
+                surface_save(_surface, $"color_swap/export/{_unix}/{j - 1}/{i}_strip{obj_Control_Color_Swap.strip_length}.png");
+            }
         }
         
         shader_reset();
